@@ -14,7 +14,7 @@
 void* traiter_client(void* arg) {
     int sservice = *(int*)arg;  
     char message[BUFFER_SIZE] = "Bienvenue sur le serveur !\n";  
-    write(sservice, message, strlen(message));  
+    write(sservice, message, strlen(message));  //vien de Prof. serveurUnix.c 
     close(sservice);  
     pthread_exit(NULL);  
 }
